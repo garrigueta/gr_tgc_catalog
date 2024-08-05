@@ -24,25 +24,25 @@
 *}
 
 <div class="panel">
-	<h3><i class="icon icon-credit-card"></i> {l s='TGC Catalog' mod='gr_tgc_catalog'}</h3>
+	<h3><i class="icon icon-credit-card"></i> {l s='TCG Catalog' mod='gr_tcg_catalog'}</h3>
 	<p>
-		<strong>{l s='Here is my new generic module!' mod='gr_tgc_catalog'}</strong><br />
-		{l s='Thanks to PrestaShop, now I have a great module.' mod='gr_tgc_catalog'}<br />
-		{l s='I can configure it using the following configuration form.' mod='gr_tgc_catalog'}
+		<strong>{l s='Here is my new generic module!' mod='gr_tcg_catalog'}</strong><br />
+		{l s='Thanks to PrestaShop, now I have a great module.' mod='gr_tcg_catalog'}<br />
+		{l s='I can configure it using the following configuration form.' mod='gr_tcg_catalog'}
 	</p>
 	<br />
 	<p>
-		{l s='This module will boost your sales!' mod='gr_tgc_catalog'}
+		{l s='This module will boost your sales!' mod='gr_tcg_catalog'}
 	</p>
 </div>
 
 <div class="panel">
-	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='gr_tgc_catalog'}</h3>
+	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='gr_tcg_catalog'}</h3>
 	<p>
-		&raquo; {l s='You can get a PDF documentation to configure this module' mod='gr_tgc_catalog'} :
+		&raquo; {l s='You can get a PDF documentation to configure this module' mod='gr_tcg_catalog'} :
 		<ul>
-			<li><a href="#" target="_blank">{l s='English' mod='gr_tgc_catalog'}</a></li>
-			<li><a href="#" target="_blank">{l s='French' mod='gr_tgc_catalog'}</a></li>
+			<li><a href="#" target="_blank">{l s='English' mod='gr_tcg_catalog'}</a></li>
+			<li><a href="#" target="_blank">{l s='French' mod='gr_tcg_catalog'}</a></li>
 		</ul>
 	</p>
 </div>

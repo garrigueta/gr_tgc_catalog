@@ -25,9 +25,9 @@
 */
 $sql = array();
 
-$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'gr_tgc_catalog` (
-    `id_gr_tgc_catalog` int(11) NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY  (`id_gr_tgc_catalog`)
+$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'gr_tcg_catalog` (
+    `id_gr_tcg_catalog` int(11) NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY  (`id_gr_tcg_catalog`)
 ) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
 
 foreach ($sql as $query) {

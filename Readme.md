@@ -1,1 +1,1 @@
-# TGC Catalog
+# TCG Catalog

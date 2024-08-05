@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
-	<name>gr_tgc_catalog</name>
-	<displayName><![CDATA[TGC Catalog]]></displayName>
+	<name>gr_tcg_catalog</name>
+	<displayName><![CDATA[TCG Catalog]]></displayName>
 	<version><![CDATA[1.0.0]]></version>
-	<description><![CDATA[Add the products required to sell TGC articles]]></description>
+	<description><![CDATA[Add the products required to sell TCG articles]]></description>
 	<author><![CDATA[Garrpe]]></author>
 	<tab><![CDATA[administration]]></tab>
 	<is_configurable>1</is_configurable>

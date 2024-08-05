@@ -28,13 +28,13 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-class Gr_tgc_catalog extends Module
+class Gr_tcg_catalog extends Module
 {
     protected $config_form = false;
 
     public function __construct()
     {
-        $this->name = 'gr_tgc_catalog';
+        $this->name = 'gr_tcg_catalog';
         $this->tab = 'administration';
         $this->version = '1.0.0';
         $this->author = 'Garrpe';
@@ -47,8 +47,8 @@ class Gr_tgc_catalog extends Module
 
         parent::__construct();
 
-        $this->displayName = $this->l('TGC Catalog');
-        $this->description = $this->l('Add the products required to sell TGC articles');
+        $this->displayName = $this->l('TCG Catalog');
+        $this->description = $this->l('Add the products required to sell TCG articles');
 
         $this->confirmUninstall = $this->l('');
 
@@ -61,7 +61,7 @@ class Gr_tgc_catalog extends Module
      */
     public function install()
     {
-        Configuration::updateValue('GR_TGC_CATALOG_LIVE_MODE', false);
+        Configuration::updateValue('GR_TCG_CATALOG_LIVE_MODE', false);
 
         include(dirname(__FILE__).'/sql/install.php');
 
@@ -74,7 +74,7 @@ class Gr_tgc_catalog extends Module
 
     public function uninstall()
     {
-        Configuration::deleteByName('GR_TGC_CATALOG_LIVE_MODE');
+        Configuration::deleteByName('GR_TCG_CATALOG_LIVE_MODE');
 
         include(dirname(__FILE__).'/sql/uninstall.php');
 
@@ -89,7 +89,7 @@ class Gr_tgc_catalog extends Module
         /**
          * If values have been submitted in the form, process.
          */
-        if (((bool)Tools::isSubmit('submitGr_tgc_catalogModule')) == true) {
+        if (((bool)Tools::isSubmit('submitGr_tcg_catalogModule')) == true) {
             $this->postProcess();
         }
 
@@ -114,7 +114,7 @@ class Gr_tgc_catalog extends Module
         $helper->allow_employee_form_lang = Configuration::get('PS_BO_ALLOW_EMPLOYEE_FORM_LANG', 0);
 
         $helper->identifier = $this->identifier;
-        $helper->submit_action = 'submitGr_tgc_catalogModule';
+        $helper->submit_action = 'submitGr_tcg_catalogModule';
         $helper->currentIndex = $this->context->link->getAdminLink('AdminModules', false)
             .'&configure='.$this->name.'&tab_module='.$this->tab.'&module_name='.$this->name;
         $helper->token = Tools::getAdminTokenLite('AdminModules');
@@ -143,7 +143,7 @@ class Gr_tgc_catalog extends Module
                     array(
                         'type' => 'switch',
                         'label' => $this->l('Live mode'),
-                        'name' => 'GR_TGC_CATALOG_LIVE_MODE',
+                        'name' => 'GR_TCG_CATALOG_LIVE_MODE',
                         'is_bool' => true,
                         'desc' => $this->l('Use this module in live mode'),
                         'values' => array(
@@ -164,12 +164,12 @@ class Gr_tgc_catalog extends Module
                         'type' => 'text',
                         'prefix' => '<i class="icon icon-envelope"></i>',
                         'desc' => $this->l('Enter a valid email address'),
-                        'name' => 'GR_TGC_CATALOG_ACCOUNT_EMAIL',
+                        'name' => 'GR_TCG_CATALOG_ACCOUNT_EMAIL',
                         'label' => $this->l('Email'),
                     ),
                     array(
                         'type' => 'password',
-                        'name' => 'GR_TGC_CATALOG_ACCOUNT_PASSWORD',
+                        'name' => 'GR_TCG_CATALOG_ACCOUNT_PASSWORD',
                         'label' => $this->l('Password'),
                     ),
                 ),
@@ -186,9 +186,9 @@ class Gr_tgc_catalog extends Module
     protected function getConfigFormValues()
     {
         return array(
-            'GR_TGC_CATALOG_LIVE_MODE' => Configuration::get('GR_TGC_CATALOG_LIVE_MODE', true),
-            'GR_TGC_CATALOG_ACCOUNT_EMAIL' => Configuration::get('GR_TGC_CATALOG_ACCOUNT_EMAIL', 'contact@prestashop.com'),
-            'GR_TGC_CATALOG_ACCOUNT_PASSWORD' => Configuration::get('GR_TGC_CATALOG_ACCOUNT_PASSWORD', null),
+            'GR_TCG_CATALOG_LIVE_MODE' => Configuration::get('GR_TCG_CATALOG_LIVE_MODE', true),
+            'GR_TCG_CATALOG_ACCOUNT_EMAIL' => Configuration::get('GR_TCG_CATALOG_ACCOUNT_EMAIL', 'contact@prestashop.com'),
+            'GR_TCG_CATALOG_ACCOUNT_PASSWORD' => Configuration::get('GR_TCG_CATALOG_ACCOUNT_PASSWORD', null),
         );
     }
 
